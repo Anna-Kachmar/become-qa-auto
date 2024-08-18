@@ -1,15 +1,24 @@
-class UserProvider:
+import os
+
+class UsersProvider:
 
     @staticmethod
     def fake_user():
         return {
-            'username': 'some_name',
-            'id': 'some_id'
+            'login': 'dmfkvkvkmfmmfmmff',
+            'id': '464664'
         }
 
     @staticmethod
     def existing_user():
         return {
-            'username': 'defunkt',
+            'login': 'defunkt',
             'id': 2,
+        }
+
+    @staticmethod
+    def existing_user_from_env():
+        return {
+            'login': os.environ.get("EXISTING_GITHUB_USER_LOGIN"),
+            'id': int(os.environ.get("EXISTING_GITHUB_USER_ID")),
         }
