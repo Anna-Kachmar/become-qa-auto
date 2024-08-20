@@ -5,7 +5,7 @@ class UsersProvider:
     @staticmethod
     def fake_user():
         return {
-            'login': 'dmfkvkvkmfmmfmmff',
+            'login': 'some_name',
             'id': '464664'
         }
 
@@ -14,6 +14,7 @@ class UsersProvider:
         return {
             'login': 'defunkt',
             'id': 2,
+            'password': 'password'
         }
 
     @staticmethod
@@ -22,3 +23,4 @@ class UsersProvider:
             'login': os.environ.get("EXISTING_GITHUB_USER_LOGIN"),
             'id': int(os.environ.get("EXISTING_GITHUB_USER_ID")),
         }
+
